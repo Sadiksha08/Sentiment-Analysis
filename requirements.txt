@@ -14,3 +14,4 @@ numpy==1.18.5
 scikit-learn @ file:///C:/ci/scikit-learn_1592853510272/work
 nbconvert==6.3.0
 scikit-learn==0.23.1
+sklearn==0.23.1
