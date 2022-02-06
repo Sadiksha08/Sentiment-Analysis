@@ -290,7 +290,7 @@ def app():
 
         # original
         # import all model & metrics
-        pip install xgboost
+        install xgboost
         print("\n*** Importing Models ***")
         from sklearn.metrics import accuracy_score
         from sklearn.metrics import confusion_matrix
