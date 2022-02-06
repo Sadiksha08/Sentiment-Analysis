@@ -34,6 +34,10 @@ import io
 import seaborn as sns
 # plotly ex
 import plotly.express as px
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 import nltk.corpus  
 from nltk.corpus import stopwords
