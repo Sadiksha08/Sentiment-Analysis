@@ -206,11 +206,11 @@ def app():
             from nltk.corpus import stopwords
             lStopWords = nltk.corpus.stopwords.words('english')
             # def function
-            def remStopWords(sText): # passing each text
+            def remStopWords(sText): 
                 global lStopWords
-                lText = sText.split()   # it become the list after split
+                lText = sText.split() 
                 lText = [t for t in lText if t not in lStopWords]    
-                return (' '.join(lText))  # it will join all the list in the sentence
+                return (' '.join(lText))  
             # iterate
             df[txtVars] = [remStopWords(t) for t in df[txtVars]]
             st.text(df[txtVars].head())
