@@ -42,9 +42,6 @@ import streamlit as st
 
 import nltk.corpus  
 from nltk.corpus import stopwords
-lStopWords = nltk.corpus.stopwords.words('english')
-lProfWords = ["arse","ass","asshole","bastard","bitch","bloody","bollocks","child-fucker","cunt","damn","fuck","goddamn","godsdamn","hell","motherfucker","shit","shitass","whore"]
-lSpecWords = ['rt','via','http','https','mailto']
 
 def app(): 
 
