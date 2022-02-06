@@ -4,7 +4,14 @@ Created on Sat Jan 29 13:09:50 2022
 
 @author: Sadiksha Singh
 """
-# imports
+# import
+
+
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+
 
 import sklearn
 import numpy as np 
@@ -35,10 +42,7 @@ import io
 import seaborn as sns
 # plotly ex
 import plotly.express as px
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
+
 
 import nltk.corpus  
 from nltk.corpus import stopwords
