@@ -7,7 +7,7 @@ Created on Tue Nov 16 00:43:41 2021
 import streamlit as st
 
 from multiapp import MultiApp
-from apps import intro,eda_vda_new, result
+from apps import intro,eda_vda_new,result
 #from apps import intro,result,eda_vda
 
 app = MultiApp()
