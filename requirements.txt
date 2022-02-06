@@ -11,3 +11,4 @@ text2emotion==0.0.5
 textblob==0.17.1
 numpy==1.22.2
 scikit-learn==0.23.1
+xgboost==1.5.1
