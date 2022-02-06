@@ -12,4 +12,3 @@ textblob==0.17.1
 numpy==1.18.5
 nbconvert==6.3.0
 scikit-learn==0.23.1
-sklearn==0.23.1
