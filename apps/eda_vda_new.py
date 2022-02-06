@@ -3,6 +3,11 @@
 #nltk.download('vader_lexicon')
 
 # imports
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+
 import pandas as pd
 from matplotlib import pyplot as plt
 #%matplotlib inline
