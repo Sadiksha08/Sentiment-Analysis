@@ -7,3 +7,10 @@ sumy==0.9.0
 wordcloud==1.8.1
 plotly==5.1.0
 contractions==0.1.66
+text2emotion==0.0.5
+textblob==0.17.1
+scikit-image==0.16.2
+numpy==1.18.5
+scikit-learn @ file:///C:/ci/scikit-learn_1592853510272/work
+nbconvert==6.3.0
+scikit-learn==0.23.1
