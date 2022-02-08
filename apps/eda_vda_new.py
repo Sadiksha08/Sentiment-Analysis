@@ -106,7 +106,7 @@ def app():
             #st.dataframe(df)
     
     # structure
-            print('**Strucure**')
+            st.write('**Strucure**')
             oBuffer = io.StringIO()
             df.info(buf=oBuffer)
             vBuffer = oBuffer.getvalue()
@@ -122,8 +122,8 @@ def app():
             st.text(df.info())
     
     # summary
-            st.write('**Summary**')
-            st.text(df.describe())
+            #print('**Summary**')
+            #print(df.describe())
     
     
 ##############################################################
@@ -154,7 +154,7 @@ def app():
 ##############################################################
 # Data Transformation
 ##############################################################
-            st.subheader("**Data Preprocessing**")
+            st.header("**Data Preprocessing**")
         
             # drop cols
             # change as required
