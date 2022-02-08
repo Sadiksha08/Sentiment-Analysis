@@ -154,7 +154,7 @@ def app():
 ##############################################################
 # Data Transformation
 ##############################################################
-        
+            st.subheader("**Data Preprocessing**")
             # drop cols
             # change as required
             st.text("\n*** Drop Column tweet_id ***")
@@ -399,11 +399,7 @@ def app():
                 return (' '.join(lText))
             # iterate
             df[txtVars] = [remShortWords(t) for t in df[txtVars]]
-            print(df[txtVars].head())
-            
-            # Total number of tweets for each airline
-            st.subheader("**Total number of tweets for each airline**")
-            st.text(df.groupby('airline')['airline_sentiment'].count().sort_values(ascending=False))      
+            print(df[txtVars].head())      
     
             # Visual Data Analysis
             # class count plot
@@ -415,6 +411,16 @@ def app():
             st.pyplot(fig)
             #plt.show()
             
+            # Total number of tweets for each airline
+            st.subheader("**Total number of tweets for each airline**")
+            st.text(df.groupby('airline')['airline_sentiment'].count().sort_values(ascending=False))   
+        
+            # Unique values of airline
+            plt.figure(figsize=(10,5))
+            ax = sns.countplot(x="airline", data=df)
+            plt.title('Total number of tweets for each airline')
+            plt.show()
+                
             #get the number of negative reasons
             print("**Negative reasons for each airline**")
             airlines= ['US Airways','United','American','Southwest','Delta','Virgin America']
@@ -428,7 +434,7 @@ def app():
                     a=df[df['airline']==Airline]
                 count=dict(a['negativereason'].value_counts())
                 Unique_reason=list(df['negativereason'].unique())
-                Unique_reason=[x for x in Unique_reason if str(x) != 'nan']
+                Unique_reason=[x for x in Unique_reason if str(x) != '']
                 Reason_frame=pd.DataFrame({'Reasons':Unique_reason})
                 Reason_frame['count']=Reason_frame['Reasons'].apply(lambda x: count[x])
                 return Reason_frame
