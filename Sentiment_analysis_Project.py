@@ -262,7 +262,7 @@ def NR_Count(Airline):
         a=df[df['airline']==Airline]
     count=dict(a['negativereason'].value_counts())
     Unique_reason=list(df['negativereason'].unique())
-    Unique_reason=[x for x in Unique_reason if str(x) != 'nan']
+    Unique_reason=[x for x in Unique_reason if str(x) != '']
     Reason_frame=pd.DataFrame({'Reasons':Unique_reason})
     Reason_frame['count']=Reason_frame['Reasons'].apply(lambda x: count[x])
     return Reason_frame
