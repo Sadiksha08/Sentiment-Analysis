@@ -106,7 +106,7 @@ def app():
             #st.dataframe(df)
     
     # structure
-            st.write('**Strucure**')
+            print('**Strucure**')
             oBuffer = io.StringIO()
             df.info(buf=oBuffer)
             vBuffer = oBuffer.getvalue()
@@ -122,7 +122,7 @@ def app():
             st.text(df.info())
     
     # summary
-            st.text('***  Summary ***')
+            st.write('**Summary**')
             st.text(df.describe())
     
     
@@ -155,11 +155,12 @@ def app():
 # Data Transformation
 ##############################################################
             st.subheader("**Data Preprocessing**")
+        
             # drop cols
             # change as required
-            st.write("**Drop Column tweet_id**")
+            st.write("**Drop Column - tweet_id**")
             df = df.drop('tweet_id', axis=1)
-            st.text("df.head()")
+            st.text(df.head())
             
             
             # Cleaning
