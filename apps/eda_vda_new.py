@@ -417,10 +417,11 @@ def app():
             st.text(df.groupby('airline')['airline_sentiment'].count().sort_values(ascending=False))   
         
             # Unique values of airline
-            plt.figure(figsize=(10,5))
-            ax = sns.countplot(x="airline", data=df)
+            fig = plt.figure(figsize=(10,5))
+            sns.countplot(x="airline", data=df)
             plt.title('Total number of tweets for each airline')
-            plt.show()
+            st.pyplot(fig)
+            #plt.show()
                 
             #get the number of negative reasons
             print("**Negative reasons for each airline**")
