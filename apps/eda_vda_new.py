@@ -106,7 +106,7 @@ def app():
             #st.dataframe(df)
     
     # structure
-            st.text('*** Strucure ***')
+            st.write('**Strucure**')
             oBuffer = io.StringIO()
             df.info(buf=oBuffer)
             vBuffer = oBuffer.getvalue()
@@ -114,11 +114,11 @@ def app():
             #st.write(df.columns)
             
     # columns
-            st.text('*** Columns ***')
+            st.write('**Columns**')
             st.text(df.columns)
     
     # info
-            st.text('***  Structure ***')
+            st.write('**Structure**')
             st.text(df.info())
     
     # summary
@@ -133,12 +133,12 @@ def app():
     # store class variable  
     # change as required
     # summary
-            st.text("\n*** Class Vars ***")
+            st.write("**Class Vars**")
             clsVars = "airline_sentiment"
             st.text(clsVars)
     
     # change as required
-            st.text("\n*** Text Vars ***")
+            st.write("**Text Vars**")
             txtVars = "text"
             st.text(txtVars)
     
@@ -147,7 +147,7 @@ def app():
         #print(df.groupby(df[clsVars]).size())
         
         # label counts ... anpther method
-            st.text("\n*** Label Counts ***")
+            st.write("**Label Counts**")
             st.text(df[clsVars].value_counts())
     
     
@@ -157,7 +157,7 @@ def app():
             st.subheader("**Data Preprocessing**")
             # drop cols
             # change as required
-            st.text("\n*** Drop Column tweet_id ***")
+            st.write("**Drop Column tweet_id**")
             df = df.drop('tweet_id', axis=1)
             st.text("df.head()")
             
@@ -167,7 +167,7 @@ def app():
             df['negativereason_confidence'] = df['negativereason_confidence'].fillna(0)
             print(df.head())
             
-            st.text("different negative reasons are:")
+            st.write("different negative reasons are:")
             st.text(df['negativereason'].unique())
             
             #df.drop(labels=['Pos', 'Neu', 'Neg', 'NltkResult'], axis=1, inplace = True)
@@ -194,12 +194,12 @@ def app():
             st.text(df[txtVars].head())
             
             # convert the tokens into lowercase: lower_tokens
-            st.text('\n*** Convert To Lower Case ***')
+            st.write('**Convert To Lower Case**')
             df[txtVars] = [t.lower() for t in df[txtVars]]
             st.text(df[txtVars].head())
             
             # retain alphabetic words: alpha_only
-            st.text('\n*** Remove Punctuations & Digits ***')
+            st.write('**Remove Punctuations & Digits**')
             import string
             df[txtVars] = [t.translate(str.maketrans('','','–01234567890')) for t in df[txtVars]]
             df[txtVars] = [t.translate(str.maketrans('','',string.punctuation)) for t in df[txtVars]]
@@ -208,7 +208,7 @@ def app():
             
             # remove all stop words
             # original found at http://en.wikipedia.org/wiki/Stop_words
-            st.text('\n*** Remove Stop Words ***')
+            st.write('**Remove Stop Words**')
             #def stop words
             import nltk.corpus  
             from nltk.corpus import stopwords
@@ -226,7 +226,7 @@ def app():
             
             # remove all bad words / pofanities ...
             # original found at http://en.wiktionary.org/wiki/Category:English_swear_words
-            st.text('\n*** Remove Profane Words ***')
+            st.write('**Remove Profane Words**')
             lProfWords = ["arse","ass","asshole","bastard","bitch","bloody","bollocks","child-fucker","cunt","damn","fuck","goddamn","godsdamn","hell","motherfucker","shit","shitass","whore"]
             # def function
             def remProfWords(sText):
@@ -239,7 +239,7 @@ def app():
             st.text(df[txtVars].head())
             
             # remove application specific words
-            st.text('\n*** Remove App Specific Words ***')
+            st.write('**Remove App Specific Words**')
             lSpecWords = ['rt','via','http','https','mailto']
             # def function
             def remSpecWords(sText):
@@ -252,7 +252,7 @@ def app():
             st.text(df[txtVars].head())
             
             # retain words with len > 3
-            st.text('\n*** Remove Short Words ***')
+            st.write('**Remove Short Words**')
             # def function
             def remShortWords(sText):
                 lText = sText.split()
