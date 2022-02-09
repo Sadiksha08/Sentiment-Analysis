@@ -64,7 +64,7 @@ def app():
         st.sidebar.title('Sentiment analysis of airlines')
         # sidebar markdown 
         st.sidebar.markdown("We can analyse passengers review from this application.")
-        st.sidebar.markdown("I hope you are enjoying while exploring this app, it will take 5 minutes to load and display the Model Result.......Thanks for patiently waiting !!!!!")
+        st.sidebar.markdown("I hope you are enjoying while exploring this app, it will take some time to load and display the Model Result.......Thanks for patiently waiting !!!!!")
         #loading the data (the csv file is in the same folder)
         # file-input.py
         print("\n*** Read File ***")
