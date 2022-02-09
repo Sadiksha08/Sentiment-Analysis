@@ -579,11 +579,6 @@ def app():
         st.write("**Sentiment analysis with textblob: Subjectivity Result**")
         st.text(df[['airline_sentiment','text','TextBlob Subjectivity Score','Textblob SubjectivityResult sentiment']].head(5))
         
-        st.write("**Sentiment analysis with textblob: Subjectivity Result**")
-        st.text(classification_report(df['airline_sentiment'],df['Textblob SubjectivityResult sentiment']))
-
-        
-        
         # Sentiment analysis with Emotion 
         
         #st.subheader(" Sentiment analysis with Text2Emotion ")
